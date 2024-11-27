@@ -15,6 +15,15 @@ body {
     color: #FFFFFF;
 }
 
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .container {
     max-width: 1440px;
     margin: 0 auto;
@@ -22,5 +31,11 @@ body {
 }
 
 .header {
-    /* padding:  */
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__nav-list {
+    display: flex;
+    flex-direction: row;
 }
