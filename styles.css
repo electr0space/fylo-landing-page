@@ -14,7 +14,10 @@ body {
     background-color: #202A3C;
     color: #FFFFFF;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 ul {
@@ -25,6 +28,24 @@ a {
     color: inherit;
     text-decoration: none;
     cursor: pointer;
+}
+
+.get-started-button {
+    width: 100%;
+    max-width: 20rem;
+    padding: 1.1rem 0;
+    font-size: 1.42rem;
+    font-family: inherit;
+    align-self: center;
+    background: linear-gradient(138.1deg, #63E1D9 -49.34%, #34A0CD 100%);
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.15925);
+    border-radius: 28px;
+    border: none;
+    color: white;
+}
+
+.get-started-button:hover {
+    background: #8ADAE3;
 }
 
 .container {
@@ -50,6 +71,12 @@ a {
 
 .header__nav-item {
     margin-left: 4.21rem;
+    font-size: 1.14rem;
+}
+
+.header__nav-item:hover {
+    text-decoration: underline;
+    text-shadow: 0.5px 0.5px 1px #FFFFFF;
 }
 
 .main {
@@ -79,7 +106,7 @@ a {
     margin-bottom: 2.5rem;
 }
 
-.hero__title {
+.hero__heading {
     font-size: 2.9rem;
     margin-bottom: 2.9rem;
     line-height: 4.29rem;
@@ -91,17 +118,6 @@ a {
     line-height: 2.14rem;
     font-size: 1.14rem;
     margin-bottom: 2.29rem;
-}
-
-.hero__button {
-    width: 100%;
-    max-width: 20rem;
-    padding: 1.1rem 0;
-    font-size: 1.42rem;
-    align-self: center;
-    background: linear-gradient(138.1deg, #63E1D9 -49.34%, #34A0CD 100%);
-    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.15925);
-    border-radius: 28px;
 }
 
 .features {
@@ -122,7 +138,7 @@ a {
     align-self: center;
 }
 
-.feature__title {
+.feature__heading {
     font-size: 1.14rem;
     margin: 1.14rem 0 0.57rem;
 }
@@ -173,4 +189,173 @@ a {
     gap: 0.6rem;
     color: #62E0D9;
     border-bottom: 1px solid #62E0D9;
+}
+
+.testimonials, .testimonial__person {
+    display: flex;
+    align-items: center;
+}
+
+.testimonials {
+    margin: 12.9rem 0 200px;
+    justify-content: center;
+    gap: 2.85rem;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    background-color: #202A3C;
+    padding: 2.86rem 1.86rem 1.86rem;
+    flex-basis: 25.7rem;
+}
+
+.testimonial:first-of-type {
+    position: relative;
+}
+
+.testimonial:first-of-type::before {
+    content: url("/images/bg-quotes.png");
+    position: absolute;
+    z-index: -1;
+    top: -37px;
+    left: -10px;
+}
+
+.testimonial__text {
+    line-height: 1.5rem;
+    margin-bottom: 1.7rem;
+}
+
+.testimonial__profile-image {
+    max-width: 1.71rem;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 0.6rem;
+}
+
+.testimonial__profile-name {
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+}
+
+.testimonial__profile-position {
+    font-size: 0.5rem;
+}
+
+.footer-container {
+    width: 100%;
+}
+
+.signup {
+    margin: 0 auto -116px;
+    max-width: 863px;
+    background-color: #1B2330;
+    padding: 3rem 5.5rem;
+    text-align: center;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.254274);
+}
+
+.signup__heading {
+    font-size: 2.3rem;
+    margin-bottom: 1.14rem;
+}
+
+.signup__desc {
+    line-height: 1.5rem;
+    max-width: 660px;
+}
+
+.signup__form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.14rem;
+    margin-top: 2.71rem;
+}
+
+.signup__email {
+    flex-grow: 3;
+    border-radius: 1.7rem;
+    padding: 1.14rem 2.71rem;
+    border: none;
+    font-family: inherit;
+}
+
+.signup__email::placeholder {
+    color:  #C0C0C0;
+    font-size: 0.9rem;
+}
+
+.signup__email:focus {
+    outline: 2px solid #34A0CD ;
+}
+
+.signup__button {
+    max-width: 14.3rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.footer-details-container {
+    width: 100%;
+    background-color: #0B1524;
+    position: absolute;
+    z-index: -1;
+    padding: 170px 120px 0;
+}
+
+.footer-details {
+    max-width: 1440px;
+    margin: 0 auto 53px;
+}
+
+.footer-details__logo svg {
+    max-width: 108px;
+}
+
+.footer {
+    display: flex;
+    margin-top: 52px;
+    font-size: 1.14rem;
+}
+
+.footer__contact {
+    display: flex;
+    flex-direction: row;
+    column-gap: 80px;
+}
+
+.footer__contact > div:first-of-type {
+    flex-basis: 379px;
+    display: flex;
+}
+
+.footer__contact-icon {
+    margin-right: 1.6rem;
+}
+
+.footer__contact-icon:first-of-type {
+    margin-top: 4px;
+}
+
+.footer__details-block {
+    display: flex;
+    align-items: center;
+}
+ 
+.footer__details-block:first-of-type {
+    margin-bottom: 16px;
+}
+
+.footer__nav {
+    display: flex;
+    column-gap: 80px;
+}
+
+.footer__nav-list li {
+    margin-bottom: 1.14rem;
+}
+
+.footer__nav-list li:hover {
+    text-shadow: 0.5px 0.5px 1px #FFFFFF;
 }
