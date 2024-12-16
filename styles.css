@@ -94,6 +94,9 @@ a {
     text-align: center;
 
     /* TODO: wrap hero and features in a div and add a bg
+
+    USING BEFORE PSEUDO ELEMENT?
+    
     background-image: url(images/bg-curvy-desktop.svg);
     background-position: bottom;
     background-size: contain;
@@ -154,14 +157,17 @@ a {
 
 .productivity-section {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-items: center;
     margin-top: 9.8rem;
     gap: 4rem;
 }
 
-.productivity-section__image {
+.productivity-section__image-container {
     max-width: 615px;
+}
+
+.productivity-section__image {
     width: 100%;
 }
 
@@ -273,8 +279,13 @@ a {
     margin-top: 2.71rem;
 }
 
-.signup__email {
+.signup__email-container {
+    position: relative;
     flex-grow: 3;
+}
+
+.signup__email {
+    width: 100%; 
     border-radius: 1.7rem;
     padding: 1.14rem 2.71rem;
     border: none;
@@ -288,6 +299,24 @@ a {
 
 .signup__email:focus {
     outline: 2px solid #34A0CD ;
+}
+
+.error-message {
+    content: "Please enter valid email.";
+    display: none;
+    position: absolute;
+    color: red;
+    top: -2rem;
+    left: 2.71rem;
+    margin-top: 5px;
+}
+
+.sent-message {
+    display: block;
+    color: lightgreen;
+    top: -2.5rem;
+    left: 2.71rem;
+    margin-top: 5px;
 }
 
 .signup__button {
@@ -322,7 +351,9 @@ a {
 .footer__contact {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     column-gap: 80px;
+    row-gap: 20px;
 }
 
 .footer__contact > div:first-of-type {
@@ -350,12 +381,116 @@ a {
 .footer__nav {
     display: flex;
     column-gap: 80px;
+    margin-left: 30px;
 }
 
 .footer__nav-list li {
     margin-bottom: 1.14rem;
+    min-width: 100px;
 }
 
 .footer__nav-list li:hover {
     text-shadow: 0.5px 0.5px 1px #FFFFFF;
 }
+
+.footer__socials .fa-brands {
+    color: white;
+}
+
+.footer__socials ul {
+    display: flex;
+    margin-left: 112px;
+}
+
+.footer__socials ul li {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    border: 1px solid white;
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    margin-left: 12px;
+}
+
+.footer__socials ul li:hover {
+    border-color: #62E0D9;  
+}
+
+.footer__socials ul li:hover .fa-brands {
+    color: #62E0D9;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+    .container {
+        padding: 0 2rem;
+        margin: 0 auto;
+    }  
+
+    .header {
+        align-items: center;
+    }
+
+    .header__logo svg {
+        max-width: 80px;
+    }
+
+    .header__nav-item {
+        margin-left: 2.21rem;
+        font-size: 1.14rem;
+    }
+
+    .testimonials {
+        margin-bottom: 80px;
+    }
+
+    .footer-details-container {
+        padding: 170px 2rem 0;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .footer__contact {
+        flex-direction: column;
+    }
+
+    .footer__contact > div:first-of-type {
+        flex-basis: auto;
+    }
+
+    .footer__nav {
+        column-gap: 15px;
+    }
+
+    .footer__socials ul {
+        margin-left: 20px;
+    }
+} 
+
+@media screen and (max-width: 425px) {
+
+    .header__nav-item {
+        margin-left: 1rem;
+        margin-bottom: 5px;
+        font-size: 1rem;
+    }
+
+    .productivity-section {
+        flex-wrap: wrap;
+    }
+
+    .signup {
+        padding: 3rem;
+    }
+
+    .signup__button {
+        max-width: 100%;
+    }
+    
+}
+
