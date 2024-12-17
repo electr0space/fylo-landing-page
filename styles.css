@@ -220,7 +220,7 @@ a {
 }
 
 .testimonial:first-of-type::before {
-    content: url("/images/bg-quotes.png");
+    content: url("images/bg-quotes.png");
     position: absolute;
     z-index: -1;
     top: -37px;
